@@ -3,6 +3,10 @@ An simple project to get orders to a restaurant using Angular
 
 
 ## Dev
+Install project dependences:
+
+    npm install
+
 Use [json-server](https://www.npmjs.com/package/json-server) to simulate backend with [menu.json](./menu.json):
     
     json-server --watch menu.json
