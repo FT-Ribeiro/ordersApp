@@ -1,1 +1,29 @@
-<p>order works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Pedido</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-list>
+    <ng-container *ngFor="let item of os.shoppingCart">
+        <mat-list-item>
+            {{item.product.description}} {{item.count}} x {{item.product.price | number:'1.2-2'}}
+        </mat-list-item>
+    </ng-container>
+</mat-list>
+<mat-action-list>
+    <button matLine mat-list-item>
+        <h2 >Total:</h2>
+        <span class="flex1"></span>
+        <h2>R$ &nbsp;{{cartPrice | number:'1.2-2'}}</h2>
+    </button>
+</mat-action-list>
+
+<mat-toolbar color="secondary">
+    <mat-toolbar-row>
+        <button mat-raised-button [routerLink]="['/menu']">Incluir mais itens</button>
+        <button mat-raised-button (click)="clearCart()">Limpar</button>
+        <span class="flex1"></span>
+        <button mat-raised-button color="accent">Concluir</button>
+    </mat-toolbar-row>
+</mat-toolbar>

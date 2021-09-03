@@ -5,9 +5,9 @@
     <mat-toolbar-row>
         <mat-icon [matBadge]="quantidadeTotal" matBadgeColor="accent">shopping_cart</mat-icon>
         <span class="flex1"></span>
-        <a [routerLink]="['/pedido']" mat-button>VER PEDIDO</a>
+        <a [routerLink]="['/order']" mat-button>VER PEDIDO</a>
         <span class="flex1"></span>
-        <span> R$ {{totalPrice | number:'1.2-2'}}</span>
+        <span> R$ {{cartPrice | number:'1.2-2'}}</span>
     </mat-toolbar-row>
 </mat-toolbar>
 
