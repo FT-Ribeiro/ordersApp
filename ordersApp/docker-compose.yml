@@ -1,0 +1,15 @@
+version: '3.6'
+
+services:
+  ordersApp:
+    image:
+    container_name:
+    environment:
+    depends_on: backend
+
+
+  backend:
+    image:
+    container_name:
+    environment:
+    depends_on: backend
