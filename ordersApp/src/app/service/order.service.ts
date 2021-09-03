@@ -31,4 +31,24 @@ export class OrderService{
             });
         }
     }
+
+    getCartLength(){
+        let sum = 0;
+        this.shoppingCart.forEach(item =>{
+            sum += item.count; 
+        })
+        return sum;
+    }
+
+    getCartPrice(){
+        let sum = 0;
+        this.shoppingCart.forEach(item =>{
+            sum += item.product.price * item.count;
+        })
+        return sum
+    }
+
+    clearCart(){
+        this.shoppingCart = [];
+    }
 }

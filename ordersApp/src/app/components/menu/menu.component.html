@@ -13,7 +13,7 @@
 
 <mat-action-list>
     <ng-container *ngFor="let product of productList; let i=index">
-        <h2 *ngIf="i === 0 ||product.categoria !== productList[i - 1].categoria">{{product.category}}</h2>
+        <h2 *ngIf="i === 0 ||product.category !== productList[i - 1].category">{{product.category}}</h2>
         <button matLine mat-list-item (click)="addToCart(product)">
             <a >{{product.description}}</a>
             <span class="flex1"></span>
