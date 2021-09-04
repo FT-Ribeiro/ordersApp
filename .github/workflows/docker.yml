@@ -25,4 +25,4 @@ jobs:
           
       - name: build angular
         run: |
-          docker build ./ordersApp -t FT-Ribeiro/orders-app:1.0.0
+          docker build ./ordersApp -t ft-ribeiro/orders-app:1.0.0
