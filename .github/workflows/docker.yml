@@ -26,4 +26,5 @@ jobs:
       - name: push image
         run: |
           docker logout
+          docker login
           docker push ft-ribeiro/orders-app:1.0.0
