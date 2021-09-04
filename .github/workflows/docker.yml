@@ -25,4 +25,4 @@ jobs:
           docker build ./ordersApp -t ft-ribeiro/orders-app:1.0.0
       - name: push image
         run: |
-          docker push orders-app:1.0.0
+          docker push ft-ribeiro/orders-app:1.0.0
