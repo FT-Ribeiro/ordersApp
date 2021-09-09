@@ -17,4 +17,4 @@ RUN npm run build --prod
 # Stage 2
 FROM nginx:1.17.1-alpine
 COPY --from=build-step /app/dist/ordersApp /usr/share/nginx/html
-COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
+COPY ordersApp/nginx-custom.conf /etc/nginx/conf.d/default.conf
