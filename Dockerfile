@@ -7,7 +7,9 @@ RUN mkdir -p /app
 
 WORKDIR /app
 
-COPY ordersApp/package.json /app
+COPY /ordersApp /app
+
+RUN cd /app
 
 RUN npm install
 COPY . /app
